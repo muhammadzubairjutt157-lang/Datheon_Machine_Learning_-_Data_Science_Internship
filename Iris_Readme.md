@@ -1,4 +1,4 @@
-# Task_1
+# Iris_Project
 Multi-Class Classification Pipeline (Iris Dataset)
 📌 Project Overview
 This project implements an end-to-end supervised machine learning classification pipeline using the classic Iris dataset. The notebook demonstrates data ingestion, exploratory analysis, preprocessing, model training, performance evaluation, and decision boundary visualization using standard Python data science libraries.
