@@ -1,0 +1,11 @@
+# Telco Customer Churn Prediction & Cost-Sensitive OptimizationAn end-to-end machine learning project designed to predict customer churn using subscription records, handle severe class imbalance, and optimize business decision thresholds for maximum financial impact.
+
+## 📌 Project OverviewCustomer attrition is one of the most critical challenges in the telecommunications industry. This project builds and evaluates robust classification models (Random Forest and XGBoost) using the Telco Customer Churn dataset. The primary focus is not just achieving a high ROC-AUC score, but also aligning model predictions with real-world business costs through strategic threshold optimization.  
+
+## 📊 Key Results & PerformanceTrain ROC-AUC: 0.9062Test ROC-AUC: 0.8416 (Comfortably exceeding the 80% benchmark target)   Models Evaluated: Random Forest Classifier & XGBoost Classifier   Class Imbalance Handled: Addressed using dynamic class weighting (scale_pos_weight = 2.77 for XGBoost and class_weight='balanced' for Random Forest).  
+  
+## 🛠️ Technical Workflow & ArchitectureData Preprocessing & Cleaning:Scanned and cleaned hidden/fake null spaces (such as blank spaces and string representations of missing values) in the TotalCharges column.
+        Converted columns into appropriate numeric and categorical data types.Feature Engineering & Leakage Prevention:Built a robust Scikit-Learn Pipeline combined with a ColumnTransformer and OneHotEncoder.
+        Ensured all transformations were fitted strictly on the training split to prevent data leakage.Model Training & Evaluation:Trained ensemble models with stratified cross-validation.   Evaluated performance using Accuracy, Precision, Recall, F1-Score, and ROC-AUC.
+        Visualizations Included:Confusion Matrices for both models.ROC-AUC Curve.Top 10 Feature Importances Bar Chart.
+## 🔍 Top Churn Drivers (Feature Importance)Based on the trained XGBoost model, the most influential factors driving customer churn are:Contract Type (Month-to-month): Month-to-month subscribers exhibit significantly higher attrition compared to 1-year or 2-year contract holders.Internet Service Type (Fiber optic): Customers using fiber optic internet show distinct churn behaviors.Add-on Services (OnlineSecurity_No, TechSupport_No): Lack of security and support features correlates heavily with customer departures.
